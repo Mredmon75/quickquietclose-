@@ -3,78 +3,210 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — QuickQuietClose</title>
+<title>QuickQuietClose — Sell Quietly, On Your Time</title>
 <style>
   * { box-sizing: border-box; }
   body { font-family: system-ui, -apple-system, sans-serif; margin: 0; background: #f8fafc; color: #0f172a; line-height: 1.6; }
   header { background: #0f172a; color: #f1f5f9; padding: 40px 20px 32px; text-align: center; }
   header h1 { margin: 0 0 8px; font-size: 1.9rem; }
   header p { margin: 0 auto; max-width: 560px; color: #cbd5e1; }
+  .badge { display: inline-block; background: #16a34a; color: #fff; padding: 4px 12px; border-radius: 999px; font-size: 0.85rem; margin-bottom: 14px; }
   main { max-width: 620px; margin: 0 auto; padding: 24px 20px 48px; }
   .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; margin-bottom: 20px; }
   h2 { margin-top: 0; font-size: 1.25rem; }
+  .promise { display: grid; gap: 8px; }
+  .promise div { background: #f1f5f9; border-radius: 8px; padding: 10px 14px; }
+  .promise strong { display: block; }
+  label { display: block; font-weight: 600; margin: 16px 0 6px; }
+  label span { font-weight: 400; color: #64748b; }
+  input, select, textarea { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font: inherit; background: #fff; }
+  textarea { min-height: 90px; resize: vertical; }
+  .check { display: flex; gap: 10px; align-items: flex-start; font-weight: 400; margin: 12px 0; }
+  .check input { width: auto; margin-top: 4px; }
+  button { width: 100%; padding: 14px; border: 0; border-radius: 8px; background: #0f172a; color: #fff; font: inherit; font-weight: 700; cursor: pointer; margin-top: 20px; }
+  button:hover { background: #1e293b; }
   .fine { font-size: 0.9rem; color: #64748b; }
-  .placeholder { background: #fef9c3; border: 1px solid #facc15; border-radius: 8px; padding: 12px 14px; }
-  a { color: #0f172a; }
+  #done { display: none; background: #dcfce7; border: 1px solid #86efac; border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+  #done h2 { color: #14532d; }
+  #schedule-done { display: none; background: #dcfce7; border: 1px solid #86efac; border-radius: 12px; padding: 20px; margin-top: 16px; }
+  #schedule-done h3 { color: #14532d; margin-top: 0; }
 </style>
 </head>
 <body>
 <header>
-  <h1>QuickQuietClose — Privacy Policy</h1>
-  <p>Sell quietly, on your time. Your details stay private.</p>
+  <span class="badge">Private &bull; No calls &bull; No haggling</span>
+  <h1>QuickQuietClose</h1>
+  <p>Sell your home quietly and confidentially — no sign in the yard, no showings, no back-and-forth. On your time, with no hurry.</p>
 </header>
 
 <main>
-  <p class="fine">Last updated: November 12, 2026</p>
-
-  <div class="card placeholder">
-    <strong>Before publishing:</strong> replace <strong>[YOUR PRIVACY EMAIL HERE]</strong> below with the email address you will actually answer privacy requests from, and only publish this page once the form is connected to a real, secure submission service. This draft is not legal advice — have it checked before launch if you can.
+  <div id="done" role="status">
+    <h2>Thank you — your request was received.</h2>
+    <p>This starter version keeps your details on this device only for this demo. We will contact you only in the way you chose below — no phone calls unless you ask for one.</p>
+    <p><strong>Your reference:</strong> <span id="ref"></span></p>
   </div>
 
   <section class="card">
-    <h2>What we collect</h2>
-    <p>Only the details you choose to give us in the private request form:</p>
-    <ul>
-      <li>Property details — address, or just city / ZIP if you prefer, home type, bedrooms, and condition.</li>
-      <li>Your timeline — including “just exploring, no rush at all.”</li>
-      <li>How to reach you — only the email address or phone number you give us, and only in the way you chose: email only, text only, or either.</li>
-      <li>Anything else you choose to add in the notes box.</li>
-    </ul>
-    <p>We do not collect anything else about you, and we do not make a public listing of your home.</p>
+    <h2>Our promise</h2>
+    <div class="promise">
+      <div><strong>Discreet</strong> No public listing, no yard sign, no open house.</div>
+      <div><strong>Confidential</strong> Your details are not shared with other buyers.</div>
+      <div><strong>No contact unless you want it</strong> Email or text only — no cold calls.</div>
+      <div><strong>No haggling</strong> One clear, firm offer. Take it or leave it.</div>
+      <div><strong>No hurry</strong> You choose the timeline. Months, not days, if that is what you need.</div>
+    </div>
   </section>
 
   <section class="card">
-    <h2>Why we collect it</h2>
-    <p>To prepare one private, firm offer for your home and to reply to you only in the way you chose. That is all it is used for. There is no obligation, and no listing is made.</p>
+    <h2>A whole new way to close — quietly</h2>
+    <p>QuickQuietClose is built to work for flip, wholesale, or whatever method you are using. It is meant to fit all needs, at the highest level, in a new and unique way.</p>
+    <div class="promise">
+      <div><strong>🤖 Bot-assisted closing</strong> Bot-assisted sessions for everyone involved in the closing process, so no one is left guessing what comes next.</div>
+      <div><strong>✅ Verified funds first</strong> The buyer connects the financial service of their choice. Funds are processed and verified before they ever interact with the homeowner / seller. The buyer pays the verification cost up front, to weed out fraud right at the start and protect the seller.</div>
+      <div><strong>🔧 Repair costs, clearly estimated</strong> An estimated cost bill for the buyer's part, to estimate repair costs. Multiple estimates if needed, until a satisfactory level is reached. Whoever requests an assessment pays the assessment fee on the platform.</div>
+      <div><strong>⚖️ Legal closing documents</strong> Bot-assisted help with all the documents needed to proceed. Even a judge signing the closing documents can take part in it. Documents are intended to be legally authentic, so the closing can proceed properly.</div>
+      <div><strong>🏠 One closing room, on one platform</strong> In the final engagement, the lawyers and everyone involved meet on one platform to finalize the closing — all the usual players, in one place, at one time. No running from office to office, no waiting days for the next signature. That is how it could speed the whole process up.</div>
+      <div><strong>🤍 No-contact, by choice</strong> A no-contact platform for those who prefer it, or who are afraid or precautious, with all the crime and impurity in the world. You can close safely, from where you are, without meeting strangers in person.</div>
+    </div>
+    <p class="fine" style="margin-top:16px;">This is the intended design for the full QuickQuietClose app. This starter page shows the idea — the verified-funds check, bot-assisted closing, repair estimates, and legal documents are not built into this demo yet. They will need a real secure financial verification provider, and legal review, before launch.</p>
   </section>
 
   <section class="card">
-    <h2>What we do not do with your details</h2>
-    <ul>
-      <li>We do not sell your details.</li>
-      <li>We do not share your details with other buyers.</li>
-      <li>We do not call you unless you ask for a call.</li>
-      <li>We do not put a sign in your yard, hold showings, or list your home publicly.</li>
-    </ul>
+    <h2>📅 Schedule the closing — when it works for everyone</h2>
+    <p>Everyone involved picks the times that work for them. The bot finds the time that works for everyone, and puts it in a calendar of convenience, so everyone's happy and on time.</p>
+    <div class="promise">
+      <div><strong>Pick your best times</strong> Seller, buyer, lawyers, and everyone else in the closing each share the times that suit them — no phone tag, no back-and-forth.</div>
+      <div><strong>One time everyone agrees on</strong> The bot matches all the times and suggests the one time that meets everyone's needs.</div>
+      <div><strong>Calendar of convenience</strong> Once everyone agrees, that time goes on everyone's calendar, with a reminder before the closing room opens.</div>
+      <div><strong>Happy and on time</strong> No one is late because they didn't know, no one misses it because the time changed. Everyone shows up together, on time.</div>
+    </div>
+
+    <form id="schedule-form">
+      <label for="close-date">Pick a closing date <span>(your first choice)</span></label>
+      <input id="close-date" name="close-date" type="date" required>
+
+      <label for="close-time">Pick a time that works for you</label>
+      <select id="close-time" name="close-time">
+        <option>9:00 AM</option>
+        <option>11:00 AM</option>
+        <option>1:00 PM</option>
+        <option>3:00 PM</option>
+        <option>5:00 PM</option>
+      </select>
+
+      <label for="close-time2">Second choice <span>(optional, helps find a match)</span></label>
+      <select id="close-time2" name="close-time2">
+        <option>9:00 AM</option>
+        <option>11:00 AM</option>
+        <option>1:00 PM</option>
+        <option selected>3:00 PM</option>
+        <option>5:00 PM</option>
+      </select>
+
+      <label for="attendees">Who needs to be there?</label>
+      <select id="attendees" name="attendees">
+        <option>Seller and buyer only</option>
+        <option selected>Seller, buyer, and lawyers</option>
+        <option>Seller, buyer, lawyers, and judge / notary</option>
+        <option>Everyone involved in the closing</option>
+      </select>
+
+      <button type="submit">Find a time that works for everyone</button>
+      <p class="fine">Demo only — this saves your pick in this browser, so you can see how it feels. The full app will check everyone's calendar and confirm the agreed time with all of them.</p>
+    </form>
+
+    <div id="schedule-done" role="status">
+      <h3>Time suggested — waiting for everyone to agree.</h3>
+      <p><strong>Your pick:</strong> <span id="schedule-summary"></span></p>
+      <p>Once everyone agrees on this time, it goes on the calendar of convenience, with a reminder before the closing room opens.</p>
+    </div>
   </section>
 
   <section class="card">
-    <h2>How long we keep your details</h2>
-    <p>We keep your request only as long as needed to prepare your offer and answer you, and then to keep a record of that offer if you ask us to. You can ask us to delete your details at any time — see below — and we will delete them unless we have to keep a copy for a legal reason, in which case we will tell you.</p>
+    <h2>Tell us about your home — privately</h2>
+    <p class="fine">This starter form is a demo. It does not send your details to a server yet — it saves them only in this browser, so you can see how it feels to use.</p>
+    <form id="form">
+      <label for="address">Property address <span>(or just city / ZIP if you prefer)</span></label>
+      <input id="address" name="address" type="text" placeholder="e.g. 123 Main St, or Chicago, IL 60601" required>
+
+      <label for="type">Type of home</label>
+      <select id="type" name="type">
+        <option>Single-family house</option>
+        <option>Condo / townhouse</option>
+        <option>Multi-family</option>
+        <option>Land / other</option>
+      </select>
+
+      <label for="beds">Bedrooms</label>
+      <select id="beds" name="beds">
+        <option>1</option><option>2</option><option selected>3</option><option>4</option><option>5+</option>
+      </select>
+
+      <label for="condition">Condition</label>
+      <select id="condition" name="condition">
+        <option>Needs work / distressed</option>
+        <option>Fair — some repairs needed</option>
+        <option>Good — liveable as-is</option>
+        <option>Recently updated</option>
+      </select>
+
+      <label for="timeline">Your timeline <span>— no hurry is fine</span></label>
+      <select id="timeline" name="timeline">
+        <option>Just exploring — no rush at all</option>
+        <option>In the next 3–6 months</option>
+        <option>In the next 6–12 months</option>
+        <option>When the time is right — contact me later</option>
+      </select>
+
+      <label for="contact">How should we reach you? <span>— email or text only</span></label>
+      <select id="contact" name="contact">
+        <option>Email only</option>
+        <option>Text message only</option>
+        <option>Email or text — either is fine</option>
+      </select>
+
+      <label for="email">Email or phone <span>(only the one you chose above)</span></label>
+      <input id="email" name="email" type="text" placeholder="you@example.com or (555) 123-4567" required>
+
+      <label for="notes">Anything else you want us to know? <span>(optional)</span></label>
+      <textarea id="notes" name="notes" placeholder="e.g. Needs repairs, tenant in place, inherited home…"></textarea>
+
+      <label class="check"><input type="checkbox" required> I understand this is a private, no-obligation request. No listing will be made and no one will call me unless I ask.</label>
+
+      <button type="submit">Request my private, firm offer</button>
+      <p class="fine">No haggling. One offer, in writing. You decide — in your own time.</p>
+    </form>
   </section>
 
-  <section class="card">
-    <h2>Seeing or deleting your details</h2>
-    <p>To see the details we hold about you, or to ask us to correct or delete them, email <strong>[YOUR PRIVACY EMAIL HERE]</strong>. Please include the reference number from your request if you have one (it looks like QQC-2026-####). We will reply in the way you chose — email or text only, no calls unless you ask.</p>
-  </section>
-
-  <section class="card">
-    <h2>Changes to this policy</h2>
-    <p>If this policy changes, we will update the date at the top of this page. The version on this page is the one that applies.</p>
-    <p class="fine">Contact: [YOUR PRIVACY EMAIL HERE] — QuickQuietClose</p>
-  </section>
-
-  <p class="fine"><a href="index.html">Back to QuickQuietClose</a></p>
+  <p class="fine">QuickQuietClose — starter version. Replace this demo form with a real, secure submission service before collecting real homeowner details, and add a privacy policy before publishing to the Play Store.</p>
 </main>
+
+<script>
+  document.getElementById('form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var ref = 'QQC-' + new Date().getFullYear() + '-' + Math.floor(1000 + Math.random() * 9000);
+    document.getElementById('ref').textContent = ref;
+    document.getElementById('done').style.display = 'block';
+    document.getElementById('done').scrollIntoView({ behavior: 'smooth' });
+    try {
+      var data = {};
+      new FormData(e.target).forEach(function (v, k) { data[k] = v; });
+      data.reference = ref;
+      localStorage.setItem('quickquietclose-demo', JSON.stringify(data));
+    } catch (err) { /* demo only — storage not required */ }
+  document.getElementById('schedule-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var date = document.getElementById('close-date').value;
+    var time = document.getElementById('close-time').value;
+    var time2 = document.getElementById('close-time2').value;
+    var who = document.getElementById('attendees').value;
+    document.getElementById('schedule-summary').textContent = (date || 'A date you choose') + ' at ' + time + ' (second choice ' + time2 + ') — ' + who;
+    document.getElementById('schedule-done').style.display = 'block';
+    document.getElementById('schedule-done').scrollIntoView({ behavior: 'smooth' });
+    try {
+      localStorage.setItem('quickquietclose-schedule-demo', JSON.stringify({ date: date, time: time, time2: time2, who: who }));
+    } catch (err) { /* demo only — storage not required */ }
+  });
+</script>
 </body>
 </html>
