@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QuickQuietClose — Sell Quietly, On Your Time</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; background: #f8fafc; color: #0f172a; line-height: 1.6; }
+  header { background: #0f172a; color: #f1f5f9; padding: 40px 20px 32px; text-align: center; }
+  header h1 { margin: 0 0 8px; font-size: 1.9rem; }
+  header p { margin: 0 auto; max-width: 560px; color: #cbd5e1; }
+  .badge { display: inline-block; background: #16a34a; color: #fff; padding: 4px 12px; border-radius: 999px; font-size: 0.85rem; margin-bottom: 14px; }
+  main { max-width: 640px; margin: 0 auto; padding: 24px 20px 48px; }
+  .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  h2 { margin-top: 0; font-size: 1.25rem; }
+  .promise { display: grid; gap: 8px; }
+  .promise div { background: #f1f5f9; border-radius: 8px; padding: 10px 14px; }
+  .promise strong { display: block; }
+  .steps { display: grid; gap: 10px; counter-reset: step; }
+  .step { display: flex; gap: 12px; background: #f1f5f9; border-radius: 8px; padding: 12px 14px; }
+  .step b.num { flex: 0 0 28px; height: 28px; border-radius: 50%; background: #0f172a; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; margin-top: 2px; }
+  label { display: block; font-weight: 600; margin: 16px 0 6px; }
+  label span { font-weight: 400; color: #64748b; }
+  input, select, textarea { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font: inherit; background: #fff; }
+  textarea { min-height: 90px; resize: vertical; }
+  .check { display: flex; gap: 10px; align-items: flex-start; font-weight: 400; margin: 12px 0; }
+  .check input { width: auto; margin-top: 4px; }
+  button { width: 100%; padding: 14px; border: 0; border-radius: 8px; background: #0f172a; color: #fff; font: inherit; font-weight: 700; cursor: pointer; margin-top: 20px; }
+  button:hover { background: #1e293b; }
+  button.secondary { background: #fff; color: #0f172a; border: 1px solid #cbd5e1; }
+  .fine { font-size: 0.9rem; color: #64748b; }
+  #done { display: none; background: #dcfce7; border: 1px solid #86efac; border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+  #done h2 { color: #14532d; }
+  #schedule-done { display: none; background: #dcfce7; border: 1px solid #86efac; border-radius: 12px; padding: 20px; margin-top: 16px; }
+  #schedule-done h3 { color: #14532d; margin-top: 0; }
+  #estimate-out { display: none; background: #eff6ff; border: 1px solid #93c5fd; border-radius: 12px; padding: 16px 20px; margin-top: 16px; }
+  .est-row { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid #dbeafe; }
+  .est-row:last-child { border-bottom: 0; font-weight: 700; }
+  footer { text-align: center; padding: 8px 20px 32px; }
+  footer a { color: #0f172a; }
+</style>
+</head>
+<body>
+<header>
+  <span class="badge">Private &bull; No calls &bull; No haggling</span>
+  <h1>QuickQuietClose</h1>
+  <p>Sell your home quietly and confidentially — no sign in the yard, no showings, no back-and-forth. On your time, with no hurry.</p>
+</header>
+
+<main>
+  <div id="done" role="status">
+    <h2>Thank you — your request was received.</h2>
+    <p>This version keeps your details on this device only for this demo. We will contact you only in the way you chose below — no phone calls unless you ask for one.</p>
+    <p><strong>Your reference:</strong> <span id="ref"></span></p>
+  </div>
+
+  <section class="card">
+    <h2>Our promise</h2>
+    <div class="promise">
+      <div><strong>Discreet</strong> No public listing, no yard sign, no open house.</div>
+      <div><strong>Confidential</strong> Your details are not shared with other buyers.</div>
+      <div><strong>No contact unless you want it</strong> Email or text only — no cold calls.</div>
+      <div><strong>No haggling</strong> One clear, firm offer. Take it or leave it.</div>
+      <div><strong>No hurry</strong> You choose the timeline. Months, not days, if that is what you need.</div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>How a quiet closing flows — step by step</h2>
+    <p>A smooth transaction, in order, with no surprises. Each step only starts when the one before it is done.</p>
+    <div class="steps">
+      <div class="step"><b class="num">1</b><div><strong>Private request</strong><br>Send your home details privately, in the form below. No listing, no calls unless you ask.</div></div>
+      <div class="step"><b class="num">2</b><div><strong>One firm offer</strong><br>One clear offer, in writing. Take it or leave it — no haggling, no back-and-forth.</div></div>
+      <div class="step"><b class="num">3</b><div><strong>Buyer verified first</strong><br>In the full app, the buyer connects the financial service of their choice, and funds are verified before they ever meet you. The buyer pays the verification cost up front, to weed out fraud and protect you.</div></div>
+      <div class="step"><b class="num">4</b><div><strong>Repair costs, clearly estimated</strong><br>See the estimate tool below. Multiple estimates if needed. Whoever requests an assessment pays the assessment fee.</div></div>
+      <div class="step"><b class="num">5</b><div><strong>One closing room</strong><br>Everyone involved — seller, buyer, lawyers, and a judge or notary if needed — meets in one quiet closing room, at a time you all agree on. Documents are handled there, bot-assisted, so nothing gets lost.</div></div>
+    </div>
+    <p class="fine" style="margin-top:16px;">Steps 3 and 5 are the intended design for the full QuickQuietClose app. This page shows how they will work — the verified-funds check, bot-assisted closing, and legal documents are not built into this demo yet. They will need a real secure financial verification provider, and legal review, before launch.</p>
+  </section>
+
+  <section class="card">
+    <h2>A whole new way to close — quietly</h2>
+    <p>QuickQuietClose is built to work for flip, wholesale, or whatever method you are using. It is meant to fit all needs, at the highest level, in a new and unique way.</p>
+    <div class="promise">
+      <div><strong>🤖 Bot-assisted closing</strong> Bot-assisted sessions for everyone involved in the closing process, so no one is left guessing what comes next.</div>
+      <div><strong>✅ Verified funds first</strong> The buyer connects the financial service of their choice. Funds are processed and verified before they ever interact with the homeowner / seller. The buyer pays the verification cost up front, to weed out fraud right at the start and protect the seller.</div>
+      <div><strong>🔧 Repair costs, clearly estimated</strong> An estimated cost bill for the buyer's part, to estimate repair costs. Multiple estimates if needed, until a satisfactory level is reached. Whoever requests an assessment pays the assessment fee on the platform.</div>
+      <div><strong>⚖️ Legal closing documents</strong> Bot-assisted help with all the documents needed to proceed. Even a judge signing the closing documents can take part in it. Documents are intended to be legally authentic, so the closing can proceed properly.</div>
+      <div><strong>🏠 One closing room, on one platform</strong> In the final engagement, the lawyers and everyone involved meet on one platform to finalize the closing — all the usual players, in one place, at one time. No running from office to office, no waiting days for the next signature. That is how it could speed the whole process up.</div>
+      <div><strong>🤍 No-contact, by choice</strong> A no-contact platform for those who prefer it, or who are afraid or precautious, with all the crime and impurity in the world. You can close safely, from where you are, without meeting strangers in person.</div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔧 Repair estimate — try it</h2>
+    <p>Tick what the home may need, and see a rough estimate range. This is a demo estimate to help you think it through — not a real quote, and not a promise of a price.</p>
+    <form id="estimate-form">
+      <label class="check"><input type="checkbox" data-low="1500" data-high="5000" value="Roof repair"> Roof repair — $1,500–$5,000</label>
+      <label class="check"><input type="checkbox" data-low="800" data-high="3500" value="Kitchen refresh"> Kitchen refresh — $800–$3,500</label>
+      <label class="check"><input type="checkbox" data-low="500" data-high="2500" value="Bathroom refresh"> Bathroom refresh — $500–$2,500</label>
+      <label class="check"><input type="checkbox" data-low="1000" data-high="6000" value="Flooring"> Flooring — $1,000–$6,000</label>
+      <label class="check"><input type="checkbox" data-low="400" data-high="2000" value="Paint, inside and out"> Paint, inside and out — $400–$2,000</label>
+      <label class="check"><input type="checkbox" data-low="1200" data-high="4500" value="Heating / cooling"> Heating / cooling — $1,200–$4,500</label>
+      <label class="check"><input type="checkbox" data-low="300" data-high="1500" value="Yard and cleanup"> Yard and cleanup — $300–$1,500</label>
+      <button type="submit">See my rough estimate</button>
+    </form>
+    <div id="estimate-out" role="status">
+      <div class="est-row"><span>Repairs you picked</span><span id="est-items"></span></div>
+      <div class="est-row"><span>Rough range</span><span id="est-range"></span></div>
+      <p class="fine">Demo only. A real assessment on the full platform would give a proper estimate, and whoever requests that assessment pays the assessment fee.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>📅 Schedule the closing — when it works for everyone</h2>
+    <p>Everyone involved picks the times that work for them. The bot finds the time that works for everyone, and puts it in a calendar of convenience, so everyone's happy and on time.</p>
+    <div class="promise">
+      <div><strong>Pick your best times</strong> Seller, buyer, lawyers, and everyone else in the closing each share the times that suit them — no phone tag, no back-and-forth.</div>
+      <div><strong>One time everyone agrees on</strong> The bot matches all the times and suggests the one time that meets everyone's needs.</div>
+      <div><strong>Calendar of convenience</strong> Once everyone agrees, that time goes on everyone's calendar, with a reminder before the closing room opens.</div>
+      <div><strong>Happy and on time</strong> No one is late because they didn't know, no one misses it because the time changed. Everyone shows up together, on time.</div>
+    </div>
+
+    <form id="schedule-form">
+      <label for="close-date">Pick a closing date <span>(your first choice)</span></label>
+      <input id="close-date" name="close-date" type="date" required>
+
+      <label for="close-time">Pick a time that works for you</label>
+      <select id="close-time" name="close-time">
+        <option>9:00 AM</option>
+        <option>11:00 AM</option>
+        <option>1:00 PM</option>
+        <option>3:00 PM</option>
+        <option>5:00 PM</option>
+      </select>
+
+      <label for="close-time2">Second choice <span>(optional, helps find a match)</span></label>
+      <select id="close-time2" name="close-time2">
+        <option>9:00 AM</option>
+        <option>11:00 AM</option>
+        <option>1:00 PM</option>
+        <option selected>3:00 PM</option>
+        <option>5:00 PM</option>
+      </select>
+
+      <label for="attendees">Who needs to be there?</label>
+      <select id="attendees" name="attendees">
+        <option>Seller and buyer only</option>
+        <option selected>Seller, buyer, and lawyers</option>
+        <option>Seller, buyer, lawyers, and judge / notary</option>
+        <option>Everyone involved in the closing</option>
+      </select>
+
+      <button type="submit">Find a time that works for everyone</button>
+      <p class="fine">Demo only — this saves your pick in this browser, so you can see how it feels. The full app will check everyone's calendar and confirm the agreed time with all of them.</p>
+    </form>
+
+    <div id="schedule-done" role="status">
+      <h3>Time suggested — waiting for everyone to agree.</h3>
+      <p><strong>Your pick:</strong> <span id="schedule-summary"></span></p>
+      <p>Once everyone agrees on this time, it goes on the calendar of convenience, with a reminder before the closing room opens.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Tell us about your home — privately</h2>
+    <p class="fine">This form is a demo. It does not send your details to a server yet — it saves them only in this browser, so you can see how it feels to use. <a href="privacy.html">Read our privacy policy</a>.</p>
+    <form id="form">
+      <label for="address">Property address <span>(or just city / ZIP if you prefer)</span></label>
+      <input id="address" name="address" type="text" placeholder="e.g. 123 Main St, or Chicago, IL 60601" required>
+
+      <label for="type">Type of home</label>
+      <select id="type" name="type">
+        <option>Single-family house</option>
+        <option>Condo / townhouse</option>
+        <option>Multi-family</option>
+        <option>Land / other</option>
+      </select>
+
+      <label for="beds">Bedrooms</label>
+      <select id="beds" name="beds">
+        <option>1</option><option>2</option><option selected>3</option><option>4</option><option>5+</option>
+      </select>
+
+      <label for="condition">Condition</label>
+      <select id="condition" name="condition">
+        <option>Needs work / distressed</option>
+        <option>Fair — some repairs needed</option>
+        <option>Good — liveable as-is</option>
+        <option>Recently updated</option>
+      </select>
+
+      <label for="timeline">Your timeline <span>— no hurry is fine</span></label>
+      <select id="timeline" name="timeline">
+        <option>Just exploring — no rush at all</option>
+        <option>In the next 3–6 months</option>
+        <option>In the next 6–12 months</option>
+        <option>When the time is right — contact me later</option>
+      </select>
+
+      <label for="contact">How should we reach you? <span>— email or text only</span></label>
+      <select id="contact" name="contact">
+        <option>Email only</option>
+        <option>Text message only</option>
+        <option>Email or text — either is fine</option>
+      </select>
+
+      <label for="email">Email or phone <span>(only the one you chose above)</span></label>
+      <input id="email" name="email" type="text" placeholder="you@example.com or (555) 123-4567" required>
+
+      <label for="notes">Anything else you want us to know? <span>(optional)</span></label>
+      <textarea id="notes" name="notes" placeholder="e.g. Needs repairs, tenant in place, inherited home…"></textarea>
+
+      <label class="check"><input type="checkbox" required> I understand this is a private, no-obligation request. No listing will be made and no one will call me unless I ask.</label>
+
+      <button type="submit">Request my private, firm offer</button>
+      <p class="fine">No haggling. One offer, in writing. You decide — in your own time.</p>
+    </form>
+  </section>
+
+  <p class="fine">QuickQuietClose — refined version. Replace the demo form with a real, secure submission service before collecting real homeowner details, and publish the privacy policy with it before the Play Store.</p>
+</main>
+
+<footer>
+  <p class="fine"><a href="privacy.html">Privacy Policy</a> &bull; Questions about your details? Email Nikki@heartlanddeal.com</p>
+  <p class="fine">QuickQuietClose — Sell quietly, on your time.</p>
+</footer>
+
+<script>
+  document.getElementById('form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var ref = 'QQC-' + new Date().getFullYear() + '-' + Math.floor(1000 + Math.random() * 9000);
+    document.getElementById('ref').textContent = ref;
+    document.getElementById('done').style.display = 'block';
+    document.getElementById('done').scrollIntoView({ behavior: 'smooth' });
+    try {
+      var data = {};
+      new FormData(e.target).forEach(function (v, k) { data[k] = v; });
+      data.reference = ref;
+      localStorage.setItem('quickquietclose-demo', JSON.stringify(data));
+    } catch (err) { /* demo only — storage not required */ }
+  });
+
+  document.getElementById('schedule-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var date = document.getElementById('close-date').value;
+    var time = document.getElementById('close-time').value;
+    var time2 = document.getElementById('close-time2').value;
+    var who = document.getElementById('attendees').value;
+    document.getElementById('schedule-summary').textContent = (date || 'A date you choose') + ' at ' + time + ' (second choice ' + time2 + ') — ' + who;
+    document.getElementById('schedule-done').style.display = 'block';
+    document.getElementById('schedule-done').scrollIntoView({ behavior: 'smooth' });
+    try {
+      localStorage.setItem('quickquietclose-schedule-demo', JSON.stringify({ date: date, time: time, time2: time2, who: who }));
+    } catch (err) { /* demo only — storage not required */ }
+  });
+
+  document.getElementById('estimate-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var picked = [];
+    var low = 0, high = 0;
+    document.querySelectorAll('#estimate-form input[type="checkbox"]:checked').forEach(function (box) {
+      picked.push(box.value);
+      low += parseInt(box.getAttribute('data-low'), 10) || 0;
+      high += parseInt(box.getAttribute('data-high'), 10) || 0;
+    });
+    document.getElementById('est-items').textContent = picked.length ? picked.join(', ') : 'Nothing picked yet';
+    document.getElementById('est-range').textContent = picked.length ? ('$' + low.toLocaleString() + ' – $' + high.toLocaleString()) : '$0';
+    document.getElementById('estimate-out').style.display = 'block';
+    document.getElementById('estimate-out').scrollIntoView({ behavior: 'smooth' });
+  });
+</script>
+</body>
+</html>
